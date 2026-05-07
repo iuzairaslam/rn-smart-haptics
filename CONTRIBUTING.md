@@ -102,6 +102,10 @@ When you're sending a pull request:
 
 ## Releases (maintainers)
 
+Keep **npm**, **`package.json`**, and **git tags** in sync: the published tarball version must match **`version`** in `package.json`, and the release tag must be **`v` + that same string** (e.g. `1.0.2` in `package.json` → tag **`v1.0.2`**). npm does not allow republishing an existing version.
+
+**GitHub’s “Packages” tab** only lists packages published to **GitHub Packages**; it stays empty while you publish only to **registry.npmjs.org**. The canonical public package page is **npm**, linked from this repo’s README.
+
 ### npm
 
 1. Update **[CHANGELOG.md](CHANGELOG.md)** and bump **`version`** in **[package.json](./package.json)** on `main` (or your release branch).
