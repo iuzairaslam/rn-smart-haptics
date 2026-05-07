@@ -5,10 +5,6 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![React Native](https://img.shields.io/badge/React_Native-0.76%2B-61dafb?logo=react)](https://reactnative.dev/)
 
-> **Where the package lives**  
-> Install from the **public npm registry**: **[npmjs.com/package/rn-smart-haptics](https://www.npmjs.com/package/rn-smart-haptics)** (same version as `version` in `package.json` and the **`v…`** git tag on this repo).  
-> The **Packages** section on GitHub is only for **[GitHub Packages](https://docs.github.com/packages)** (`npm.pkg.github.com`, containers, etc.). This project publishes to **npmjs.org** only, so GitHub’s “No packages published” is expected—not a sign the npm release failed.
-
 ![rn-smart-haptics — premium haptic feedback for React Native](./docs/banner.png)
 
 Rich **haptic patterns** for React Native: **named presets**, **custom impact sequences**, and **rhythm** playback. Ships as a **New Architecture Turbo Module** with **Core Haptics** on iOS and **waveform vibration** (with amplitudes) on Android—without leaning on the legacy bridge for playback scheduling.
