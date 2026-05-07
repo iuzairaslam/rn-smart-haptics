@@ -2,6 +2,12 @@
 
 All notable changes to **rn-smart-haptics** are documented here. This project adheres to [Semantic Versioning](https://semver.org/).
 
+## 1.0.1 — 2026-05-08
+
+### Changed
+
+- **README**: hero banner image (`docs/banner.png`); image included in the published package so it renders on npm as well as GitHub.
+
 ## 1.0.0 — 2026-05-08
 
 ### Added
@@ -11,7 +17,7 @@ All notable changes to **rn-smart-haptics** are documented here. This project ad
 - iOS **Core Haptics** with UIKit fallbacks; Android **VibrationEffect** waveforms with amplitude support where available.
 - **`HapticsValidationError`** and **`LIMITS`** exports for client-side validation and documentation.
 - Native defensive caps (JSON size, sequence steps, waveform segments, rhythm beats, fallback timer scheduling).
-- Unit tests (`yarn test`) and CI wiring.
+- Unit tests (`yarn test`).
 
 ### Notes
 

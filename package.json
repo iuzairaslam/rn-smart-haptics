@@ -1,6 +1,6 @@
 {
   "name": "rn-smart-haptics",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rich haptic patterns for React Native — Turbo Module, Core Haptics (iOS), waveform vibration (Android). Stable 1.x API.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
