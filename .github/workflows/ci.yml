@@ -28,6 +28,9 @@ jobs:
       - name: Lint files
         run: yarn lint
 
+      - name: Unit tests (with coverage thresholds)
+        run: yarn test:coverage
+
       - name: Typecheck files
         run: yarn typecheck
 

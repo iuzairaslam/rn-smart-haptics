@@ -99,3 +99,33 @@ When you're sending a pull request:
 - Review the documentation to make sure it looks good.
 - Follow the pull request template when opening a pull request.
 - For pull requests that change the API or implementation, discuss with maintainers first by opening an issue.
+
+## Releases (maintainers)
+
+### npm
+
+1. Update **[CHANGELOG.md](CHANGELOG.md)** and bump **`version`** in **[package.json](./package.json)** on `main` (or your release branch).
+2. Open a PR if you want review, then merge.
+3. Create and push an annotated tag that matches the version, e.g. **`v1.0.1`**:
+   ```sh
+   git tag -a v1.0.1 -m "v1.0.1"
+   git push origin v1.0.1
+   ```
+4. **[Publish to npm](.github/workflows/publish.yml)** runs on tag push **`v*`** and executes **`yarn verify`** then **`npm publish`**.
+
+Configure a repository secret **`NPM_TOKEN`** (npm “Automation” or “Publish” token). Without it, the workflow fails at the publish step.
+
+To publish locally instead:
+
+```sh
+yarn verify
+yarn publish:npm
+# or: npm publish --access public
+```
+
+Use your own npm login; do not commit tokens.
+
+### GitHub Actions vs local
+
+- **CI** (`.github/workflows/ci.yml`) runs on pushes and PRs to **`main`** and on merge queue.
+- **Publish** (`.github/workflows/publish.yml`) runs only on **`v*`** tags (and can be triggered manually via **workflow_dispatch**).
