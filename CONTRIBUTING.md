@@ -111,7 +111,7 @@ When you're sending a pull request:
    git tag -a v1.0.1 -m "v1.0.1"
    git push origin v1.0.1
    ```
-4. **[Publish to npm](.github/workflows/publish.yml)** runs on tag push **`v*`** and executes **`yarn verify`** then **`npm publish`**.
+4. **[Publish to npm](.github/workflows/publish.yml)** runs on tag push **`v*`** (same layout as [react-native-adaptive-text](https://github.com/iuzairaslam/react-native-adaptive-text)): **`npm install --legacy-peer-deps`**, **`npm run typecheck`**, then **`npm publish --access public`**. The **`prepare`** script builds **`lib/`** during publish.
 
 Configure a repository secret **`NPM_TOKEN`** (npm “Automation” or “Publish” token). Without it, the workflow fails at the publish step.
 
@@ -125,7 +125,6 @@ yarn publish:npm
 
 Use your own npm login; do not commit tokens.
 
-### GitHub Actions vs local
+### GitHub Actions
 
-- **CI** (`.github/workflows/ci.yml`) runs on pushes and PRs to **`main`** and on merge queue.
-- **Publish** (`.github/workflows/publish.yml`) runs only on **`v*`** tags (and can be triggered manually via **workflow_dispatch**).
+- **Publish** (`.github/workflows/publish.yml`) runs on **`v*`** tags and on **workflow_dispatch** (manual). There is no separate CI workflow in this repo—run **`yarn verify`** locally before merging when you change native or library code.

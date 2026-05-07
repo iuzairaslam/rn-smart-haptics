@@ -5,6 +5,8 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![React Native](https://img.shields.io/badge/React_Native-0.76%2B-61dafb?logo=react)](https://reactnative.dev/)
 
+![rn-smart-haptics — premium haptic feedback for React Native](./docs/banner.png)
+
 Rich **haptic patterns** for React Native: **named presets**, **custom impact sequences**, and **rhythm** playback. Ships as a **New Architecture Turbo Module** with **Core Haptics** on iOS and **waveform vibration** (with amplitudes) on Android—without leaning on the legacy bridge for playback scheduling.
 
 ## Table of contents
@@ -227,7 +229,6 @@ Full workflow: **[CONTRIBUTING.md](CONTRIBUTING.md)** · **[CODE_OF_CONDUCT.md](
 ## Publishing (maintainers)
 
 - **npm**: `yarn verify` then publish (see **`package.json`** `publish:npm` and `publishConfig`).
-- **CI**: pushing a git tag `v*` runs **[Publish to npm](.github/workflows/publish.yml)** when **`NPM_TOKEN`** is configured in repository secrets.
 - Details: **[CONTRIBUTING.md — Releases](CONTRIBUTING.md#releases-maintainers)**.
 
 ## Versioning & stability
